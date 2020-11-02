@@ -3,6 +3,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 
 import {HolRoutingModule} from './hol-routing.module';
 import {HolComponent} from './hol.component';
+import {MatCardModule} from '@angular/material/card';
 
 const holProviders = [];
 
@@ -12,12 +13,14 @@ const holProviders = [];
   ],
   imports: [
     BrowserModule,
-    HolRoutingModule
+    HolRoutingModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [HolComponent]
 })
-export class HolModule {}
+export class HolModule {
+}
 
 export class HolSharedModule {
   static forRoot(): ModuleWithProviders<any> {
