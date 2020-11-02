@@ -4,6 +4,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {HolRoutingModule} from './hol-routing.module';
 import {HolComponent} from './hol.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 const holProviders = [];
 
@@ -14,7 +15,8 @@ const holProviders = [];
   imports: [
     BrowserModule,
     HolRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [HolComponent]
