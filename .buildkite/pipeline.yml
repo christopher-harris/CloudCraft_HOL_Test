@@ -1,4 +1,4 @@
-- trigger: "CloudCraft Test - Core HOL Tests"
+- trigger: "cloudcraft-hol-tests"
   label: "Trigger Lab Tests"
   build:
     env:
