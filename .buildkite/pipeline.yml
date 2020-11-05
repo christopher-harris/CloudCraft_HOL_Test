@@ -1,24 +1,5 @@
-steps:
-  - command:
-      - "npm install"
-      - "npm run ng lint"
-    label: "Lint"
+- trigger: "cloudcraft-poc-labs"
+  label: "Trigger Lab Tests"
+  build:
     env:
-      NG_CLI_ANALYTICS: ci
-    plugins:
-      - docker#v3.7.0:
-          image: "node:12.11.1"
-          propagate-environment: true
-  - wait
-  - block: "Release to GH-Pages"
-  - label: "deploy"
-    branches: "master"
-    command:
-      - "npm install"
-      - "npm run deploy"
-    env:
-      NG_CLI_ANALYTICS: ci
-    plugins:
-      - docker#v3.7.0:
-          image: "node:12.11.1"
-          propagate-environment: true
+      HOL_BRANCH: "${BUILDKITE_BRANCH}"
