@@ -5,6 +5,7 @@ import {HolRoutingModule} from './hol-routing.module';
 import {HolComponent} from './hol.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
 
 const holProviders = [];
 
@@ -16,7 +17,8 @@ const holProviders = [];
     BrowserModule,
     HolRoutingModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [HolComponent]
